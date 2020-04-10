@@ -1,0 +1,87 @@
+**努比亚z17刷机**
+
+**1、刷入TWRP**
+
+
+```
+参考：
+https://sspai.com/post/53043
+
+https://magiskroot.net/download-xposed-for-android-pie/
+```
+
+```
+https://twrp.me/nubia/nubianx563j.html
+    
+    使用方法
+    
+    fastboot oem nubia_unlock NUBIA_NX563J
+
+    fastboot flash recovery twrp-3.3.1-0-nx563j.img
+    
+    坑1、针对努比亚z17需要安装高通的usb驱动
+    
+        https://raw.githubusercontent.com/gsmusbdrivers/usbdrivers/master/Qualcomm_QDLoader_HS-USB_Driver_64bit_Setup.zip
+    
+    坑2 出现any device fastboot
+        
+        需要在bootloader模式下进行
+```
+
+**刷入Magisk**
+```
+
+https://github.com/topjohnwu/Magisk/releases
+
+
+
+
+    坑1、twrp 刷入magisk 反复重启
+    
+        解决办法
+            
+            使用 Magisk 应用对 boot.img 进行重新打包
+            
+            
+        1、从你的刷机包中提取当前固件的 boot.img 文件，将它传入到安装了 Magisk Manager 的手机中
+        
+        2、进入 Magisk Manager —— 安装（install）—— install —— 修补 boot 镜像文件
+        
+        3、然后选择传入的 boot.img 文件进行生成，并将生成后的 Patchedboot.img放到容易操作的目录
+        
+        4、通过twrp 卡刷进去
+        
+        
+    坑2、magiskmanager 修补 boot 镜像文件 自动指定为相册
+    
+        可能是系统Bug,更换系统版本
+        
+    坑3、    magiskmanager 没有显示下载
+    
+            挂代理解决magiskmanager
+```
+
+**Magisk刷入Xposed**
+
+
+```
+https://github.com/ElderDrivers/EdXposed/releases
+
+    SandHook开发版
+    
+    YAHFA稳定版
+
+
+https://github.com/ElderDrivers/EdXposedManager/releases
+
+https://github.com/RikkaApps/Riru/releases
+
+
+
+https://github.com/RikkaApps/Riru/releases
+
+
+使用太极解决
+
+    https://github.com/taichi-framework/TaiChi
+```
